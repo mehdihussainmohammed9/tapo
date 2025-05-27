@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/gameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Background image -->
+    <ImageView
+        android:id="@+id/bgImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_trees" />
+
+    <!-- Obstacle (rock) -->
+    <ImageView
+        android:id="@+id/obstacle"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="80dp"
+        android:src="@drawable/rock" />
+
+    <!-- Kangaroo -->
+    <ImageView
+        android:id="@+id/kangaroo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="bottom|start"
+        android:layout_marginStart="50dp"
+        android:layout_marginBottom="80dp"
+        android:src="@drawable/kangaroo" />
+
+    <!-- Score Text -->
+    <TextView
+        android:id="@+id/scoreText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Score: 0"
+        android:textSize="32sp"
+        android:textColor="#FFFFFF"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_marginTop="40dp"
+        android:shadowColor="#000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="3" />
+
+    <!-- AdMob Banner -->
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-4902321248994256/9476052223" />
+</FrameLayout>
